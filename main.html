@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="/css/fonts.css" type="text/css" rel="stylesheet">
+    <link href="/css/dots-animation.css" type="text/css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'uni_sansheavy';
+            src: url('fonts/Uni-Sans-Heavy-Italic.ttf') format("truetype");
+            font-style: italic;
+        }
+
+        @font-face {
+            font-family: "uni_sansheavy";
+            src: url('fonts/ofont.ru_Uni-Sans.ttf') format("truetype");
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: "noto_sans";
+            src: url('fonts/NotoSans-Bold.ttf') format("truetype");
+            font-style: normal;
+        }
+    </style>
+    <link rel="icon" href="discord-avatar-1024-EWW67.png">
+    <title>Meme Land</title>
+</head>
+<body class="bg-black">
+    <section class="bg-[#0d6efd] font-bold lg:px-16 md:px-8 px-4 hover:bg-blue-600 transition-colors duration-500">
+        <div class="py-[40px] flex justify-between items-center">
+            <div>
+                <h1 class="lg:text-9xl md:text-7xl text-6xl" style="text-shadow: 0.05em 0.05em 2px #0c63e4;">Welcome to <br>Meme Land</h1>
+                <h2 class="text-3xl lg:text-4xl py-6" style="text-shadow: 0.05em 0.05em 2px #0c63e4;">🚀 <span class="text-yellow-400 underline decoration-solid">Присоединяйся</span> в нашу большую мемную сеть!</h2>
+                <button onclick="location.href = 'https://discord.com/api/oauth2/authorize?client_id=894952935442747393&permissions=414464666688&scope=bot%20applications.commands'" type="button" class="w-full lg:w-64 lg:h-12 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 transition hover:-translate-y-1 hover:scale-105 delay-100">Пригласить на сервер</button>
+                <button onclick="location.href = 'https://discord.gg/meme-land-server-podderzhki-bota-892493256129118260'" type="button" class="w-full lg:w-64 lg:h-12 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 transition hover:-translate-y-1 hover:scale-105 delay-100">Сервер разработчиков</button>
+            </div>
+            <img class="rounded-full h-1/3 w-1/3 hidden sm:block rotate-[5deg]" src="discord-avatar-1024-EWW67.png" alt="avatar">
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1 class="py-8 text-5xl text-center" style="font-style: normal; text-shadow: none">Наши достижения</h1>
+            <div align="center" class="py-8 lg:flex lg:justify-evenly">
+                <ul>
+                    <li><h2 class="text-4xl" style="text-shadow: none">Серверов</h2></li>
+                    <li><h3 class="statistic-number text-7xl" id="servers_counter">2400+</h3></li>
+                </ul>
+                <ul>
+                    <li><h2 class="text-4xl" style="text-shadow: none">Участников</h2></li>
+                    <li><h3 class="text-7xl" style="text-shadow: 0.05em 0.05em 2px #0c63e4;" id="users_counter">140К+</h3></li>
+                </ul>
+                <script>
+                    function animateValue(id, start, end, duration, postfix) {
+                        if (start === end) return;
+                        var range = end - start;
+                        var current = start;
+                        var increment = end > start? 1 : -1;
+                        var stepTime = Math.abs(Math.floor(duration / range));
+                        var obj = document.getElementById(id);
+                        var timer = setInterval(function() {
+                            current += increment;
+                            obj.innerHTML = String(current) + postfix;
+                            if (current === end) {
+                                clearInterval(timer);
+                            }
+                        }, stepTime);
+                    }
+
+                    animateValue("servers_counter", 1100, 2500, 0.001, "+");
+                    animateValue("users_counter", 1, 140, 5000, "К+")
+                </script>
+            </div>
+        </div>
+    </section>
+    <h1 class="dot unselectable text-5xl transition-opacity" style="margin-top: 1%; text-align: center;">●</h1>
+    <h1 class="dot dot-number-1 unselectable text-5xl" style="text-align: center">●</h1>
+    <h1 class="dot dot-number-2 unselectable text-5xl" style="text-align: center">●</h1>
+    <section>
+        <h1 class="py-8 text-5xl text-center" style="font-style: normal; text-shadow: none">Немного о боте...</h1>
+        <p class=" text-2xl text-center" style="font-family: 'noto_sans', serif;">Meme Land - это не просто бот, это отдельная социальная сеть внутри мессенджера Discord.<br>
+            Более 2х тычяч серверов добавили нашего бота к себе. Любой участник сервера, где находится бот,<br>
+            может просматривать мемы других пользователей, а также постить свои шедевры!</p>
+    </section>
+    <h1 class="dot dot-number-3 unselectable text-5xl" style="margin-top: 1%; text-align: center;">●</h1>
+    <h1 class="dot dot-number-4 unselectable text-5xl" style="text-align: center">●</h1>
+    <h1 class="dot dot-number-5 unselectable text-5xl" style="text-align: center">●</h1>
+    <section>
+        <h1 class="py-8 text-5xl text-center" style="font-style: normal; text-shadow: none">Команды бота</h1>
+<!--        <div class="flex justify-center text-center grid grid-cols-3">-->
+<!--            <p class="text-5xl text-right">/help</p>-->
+<!--            <p class="text-5xl text-left col-span-2">помощь по командам бота</p>-->
+<!--            <p class="text-5xl text-right">/meme</p>-->
+<!--            <p class="text-5xl text-left col-span-2">рандомный мем</p>-->
+<!--        </div>-->
+
+        <div class="pb-16 overflow-x-auto relative items-center">
+            <table class="w-9/12 text-sm text-left text-gray-500 dark:text-gray-400" align="center">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="py-3 px-6 rounded-tl-lg">
+                        Команда &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-red-400 text-xs normal-case">*Красный цвет - для администраторов сервера</span>
+                    </th>
+                    <th scope="col" class="py-3 px-6 rounded-tr-lg">
+                        Описание
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /help
+                    </th>
+                    <td class="py-4 px-6">
+                        Открыть помощь по командам бота
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /meme
+                    </th>
+                    <td class="py-4 px-6">
+                        Посмотреть рандомный мем
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /meme [id мема]
+                    </th>
+                    <td class="py-4 px-6">
+                        Показывает мем с нужным id
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /last_meme
+                    </th>
+                    <td class="py-4 px-6">
+                        Показывает последний одобренный мем
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /top_meme
+                    </th>
+                    <td class="py-4 px-6">
+                        Посмотреть самый залайканый мем в боте
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /profile
+                    </th>
+                    <td class="py-4 px-6">
+                        Показывает ваш мемный профиль
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /leaderboard
+                    </th>
+                    <td class="py-4 px-6">
+                        Показывает таблицу лидеров
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        /memes_color
+                    </th>
+                    <td class="py-4 px-6">
+                        Изменить цвет своих мемов, профиля
+                    </td>
+                </tr>
+                <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                        <span class="text-red-400">/auto_meme [#канал]</span>
+                    </th>
+                    <td class="py-4 px-6">
+                        <span class="text-red-400">Устанавливает канал для постинга мемов раз в 30 минут</span>
+                    </td>
+                </tr>
+                <tr class="bg-white dark:bg-gray-800">
+                    <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white rounded-bl-lg">
+                        <span class="text-red-400">/stop_auto_meme</span>
+                    </th>
+                    <td class="py-4 px-6 rounded-br-lg">
+                        <span class="text-red-400">Приостанавливает авто постинг мемов на сервере</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <footer class="bg-[#121212]">
+        <div class="lg:flex lg:justify-between items-center text-center">
+            <p class="lg:pl-4"><span class="text-red-500 text-xl">♥️</span> Powered by EBOLA</p>
+            <p>Мы не являемся аффимилированным лицом <a href="https://discord.com/" class="text-yellow-400">Discord App</a></p>
+            <p class="lg:pr-4">©️2021-2023</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+.dot {
+    opacity: 0;
+    animation: dot_animation 6s infinite;
+    -moz-animation: dot_animation 6s infinite;
+    -webkit-animation: dot_animation 6s infinite;
+    -o-animation: dot_animation 6s infinite;
+}
+
+.dot-number-1 {
+    animation-delay: 1s;
+}
+
+.dot-number-2 {
+    animation-delay: 2s;
+}
+
+.dot-number-3 {
+    animation-delay: 3s;
+}
+
+.dot-number-4 {
+    animation-delay: 4s;
+}
+
+.dot-number-5 {
+    animation-delay: 5s;
+}
+
+@keyframes dot_animation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes dot_animation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-webkit-keyframes dot_animation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@-o-keyframes dot_animation {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

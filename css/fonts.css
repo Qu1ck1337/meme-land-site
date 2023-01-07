@@ -1,0 +1,25 @@
+body {
+    color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'uni_sansheavy', serif;
+    font-style: italic;
+}
+
+p {
+    font-family: noto_sans, serif;
+    font-style: normal;
+}
+
+.statistic-number {
+    text-shadow: 0.05em 0.05em 2px gold;
+    -webkit-text-stroke: 0.4px #777;
+}
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
